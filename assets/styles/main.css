@@ -1,0 +1,303 @@
+@import url("/TrollCall/assets/styles/fonts.css");
+@import url("/TrollCall/assets/styles/normalize.css");
+:root {
+  --pri0: #000000;
+  --pri10: #333333;
+  --pri20: #666666;
+  --pri30: #999999;
+  --pri40: #cccccc;
+  --pri50: #ffffff;
+  --pri60: #ffffff;
+  --pri70: #ffffff;
+  --pri80: #ffffff;
+  --pri90: #ffffff;
+  --pri100: #ffffff;
+  --sec0: #000000;
+  --sec10: #0d0d0d;
+  --sec20: #1a1a1a;
+  --sec30: #262626;
+  --sec40: #333333;
+  --sec50: #404040;
+  --sec60: #666666;
+  --sec70: #8c8c8c;
+  --sec80: #b3b3b3;
+  --sec90: #d9d9d9;
+  --sec100: #ffffff;
+}
+body {
+  --this-color0: var(--pri0);
+  --this-color10: var(--pri10);
+  --this-color20: var(--pri20);
+  --this-color30: var(--pri30);
+  --this-color40: var(--pri40);
+  --this-color50: var(--pri50);
+  --this-color60: var(--pri60);
+  --this-color70: var(--pri70);
+  --this-color80: var(--pri80);
+  --this-color90: var(--pri90);
+  --this-color100: var(--pri100);
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 32px;
+  font-family: 'Nunito', sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: var(--this-color10);
+  color: var(--this-color90);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+body slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 2px solid var(--this-color40);
+  background-color: var(--this-color30);
+  color: var(--this-color40);
+  aspect-ratio: 1 / 1;
+  width: 40px;
+  min-width: 32px;
+}
+body slot:hover {
+  border: 2px solid var(--this-color80);
+  color: var(--this-color80);
+}
+body box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: inherit;
+  align-items: inherit;
+  align-content: flex-start;
+  max-width: 100%;
+  flex: 1;
+  padding: 8px;
+  gap: 8px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: inherit;
+}
+body box[grid] {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, auto);
+  grid-template-rows: auto;
+  gap: auto;
+}
+body box[vfit] {
+  min-height: max-content;
+  height: max-content;
+  max-height: max-content;
+}
+body box[strictparent] {
+  min-width: 350px;
+}
+body box[parent] {
+  min-width: 300px;
+}
+body box[outline] {
+  border-radius: 8px;
+  border: 1px solid var(--this-color80);
+  background-color: var(--this-color20);
+  color: var(--this-color80);
+}
+body box[frame] {
+  --this-color0: var(--sec0);
+  --this-color10: var(--sec10);
+  --this-color20: var(--sec20);
+  --this-color30: var(--sec30);
+  --this-color40: var(--sec40);
+  --this-color50: var(--sec50);
+  --this-color60: var(--sec60);
+  --this-color70: var(--sec70);
+  --this-color80: var(--sec80);
+  --this-color90: var(--sec90);
+  --this-color100: var(--sec100);
+  border-radius: 8px;
+  background-color: var(--this-color20);
+}
+body box[code] {
+  font-family: 'Inconsolata', sans-serif;
+}
+body box[horizontal] {
+  flex-direction: row;
+  width: 100%;
+}
+body box[align-center] {
+  align-items: center;
+  text-align: center;
+}
+body box[align-start] {
+  align-items: flex-start;
+  text-align: left;
+}
+body box[align-end] {
+  align-items: flex-end;
+  text-align: right;
+}
+body box[align-stretch] {
+  align-items: stretch;
+  text-align: center;
+}
+body box[justify-start] {
+  justify-content: flex-start;
+}
+body box[justify-end] {
+  justify-content: flex-end;
+}
+body box[justify-center] {
+  justify-content: center;
+  text-align: center;
+}
+body box[justify-around] {
+  justify-content: space-around;
+  text-align: center;
+}
+body box[nowrap] {
+  flex-wrap: nowrap;
+}
+body box[nopad] {
+  padding: 0;
+}
+body box[noimportant] {
+  flex: 0;
+}
+body box[unimportant] {
+  flex: 0.5;
+  min-width: 200px;
+}
+body box[important] {
+  flex: 2;
+  width: 100%;
+}
+body box[nospan] {
+  max-width: 400px;
+}
+body box[span] {
+  width: 100%;
+}
+body box[vcontent] {
+  height: max-content;
+  overflow: visible;
+}
+body box[content] {
+  width: max-content;
+  overflow: visible;
+}
+body box[debug] {
+  outline: 5px solid red;
+}
+body text,
+body a {
+  display: inline-block;
+  font-size: 16px;
+  color: var(--this-color80);
+  max-width: 100%;
+  font-family: inherit;
+}
+body text[large],
+body a[large],
+body text[big],
+body a[big] {
+  font-family: 'Krona One', sans-serif;
+  text-transform: uppercase;
+}
+body text[large],
+body a[large] {
+  font-size: 24px;
+}
+body text[big],
+body a[big] {
+  font-size: 18px;
+}
+body text[pad],
+body a[pad] {
+  padding: 8px;
+}
+body text[align-center],
+body a[align-center] {
+  text-align: center;
+}
+body text[align-left],
+body a[align-left] {
+  text-align: left;
+}
+body text[align-right],
+body a[align-right] {
+  text-align: right;
+}
+body text[nobreak],
+body a[nobreak] {
+  white-space: nowrap;
+}
+body text[span],
+body a[span] {
+  width: 100%;
+}
+body text[frame],
+body a[frame] {
+  --this-color0: var(--sec0);
+  --this-color10: var(--sec10);
+  --this-color20: var(--sec20);
+  --this-color30: var(--sec30);
+  --this-color40: var(--sec40);
+  --this-color50: var(--sec50);
+  --this-color60: var(--sec60);
+  --this-color70: var(--sec70);
+  --this-color80: var(--sec80);
+  --this-color90: var(--sec90);
+  --this-color100: var(--sec100);
+  padding: 4px;
+  border-radius: 8px;
+  background-color: var(--this-color20);
+}
+body text[code],
+body a[code] {
+  font-family: 'Inconsolata', sans-serif;
+}
+body a:any-link {
+  font-weight: bold;
+  color: var(--this-color70);
+  text-decoration: underline;
+}
+body a:visited {
+  color: var(--this-color90);
+}
+body a[boxish] {
+  text-decoration: none;
+}
+body a[boxish][nospan] {
+  max-width: 400px;
+}
+body a[boxish][span] {
+  width: 100%;
+}
+body spacer {
+  width: 100%;
+  height: 0;
+  border: 1px dashed var(--this-color80);
+}
+body spacer[vertical] {
+  width: 0;
+  height: auto;
+}
+body spacer[noshow] {
+  border: none;
+}
+body img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: calc(100vh - 64px);
+}
+body img[icon] {
+  width: 200px;
+  height: 300px;
+}
+body span.material-symbols-outlined {
+  width: 18px;
+  font-size: 18px;
+  color: var(--this-color80);
+}
