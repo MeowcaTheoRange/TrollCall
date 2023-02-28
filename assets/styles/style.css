@@ -7,6 +7,15 @@ box[pattern] {
 .imageHolder {
   min-width: 300px !important;
 }
+.nameholder {
+  min-width: 300px !important;
+}
+.characterish {
+  min-width: 575px;
+}
+#username2 {
+  width: 4ch;
+}
 slotObject {
   width: 32px;
   height: 32px;

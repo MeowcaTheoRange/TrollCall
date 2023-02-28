@@ -65,6 +65,67 @@ body slot:hover {
   border: 2px solid var(--this-color80);
   color: var(--this-color80);
 }
+body input,
+body select,
+body textarea {
+  border: none;
+  width: 20ch;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: inherit;
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+body input[bg],
+body select[bg],
+body textarea[bg] {
+  --this-color0: var(--sec0);
+  --this-color10: var(--sec10);
+  --this-color20: var(--sec20);
+  --this-color30: var(--sec30);
+  --this-color40: var(--sec40);
+  --this-color50: var(--sec50);
+  --this-color60: var(--sec60);
+  --this-color70: var(--sec70);
+  --this-color80: var(--sec80);
+  --this-color90: var(--sec90);
+  --this-color100: var(--sec100);
+  font-family: 'Inconsolata', sans-serif;
+  background-color: var(--this-color20);
+  color: var(--this-color80);
+  padding: 4px;
+  border-radius: 8px;
+}
+body input[type=number],
+body select[type=number],
+body textarea[type=number] {
+  width: calc(2ch + 8px);
+  -moz-appearance: textfield;
+}
+body input[type=number]::-webkit-inner-spin-button,
+body select[type=number]::-webkit-inner-spin-button,
+body textarea[type=number]::-webkit-inner-spin-button,
+body input[type=number]::-webkit-outer-spin-button,
+body select[type=number]::-webkit-outer-spin-button,
+body textarea[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body input[titleBox],
+body select[titleBox],
+body textarea[titleBox] {
+  font-size: 24px;
+  font-family: 'Krona One', sans-serif;
+  text-transform: uppercase;
+}
+body textarea {
+  width: 80ch;
+  height: 40ch;
+  overflow: auto;
+  resize: horizontal;
+}
 body box {
   display: flex;
   flex-direction: column;
@@ -96,6 +157,12 @@ body box[strictparent] {
 }
 body box[parent] {
   min-width: 300px;
+}
+body box[strictchild] {
+  max-width: 350px;
+}
+body box[child] {
+  max-width: 300px;
 }
 body box[outline] {
   border-radius: 8px;
@@ -259,11 +326,11 @@ body a[code] {
 }
 body a:any-link {
   font-weight: bold;
-  color: var(--this-color70);
+  color: var(--this-color90);
   text-decoration: underline;
 }
 body a:visited {
-  color: var(--this-color90);
+  color: var(--this-color70);
 }
 body a[boxish] {
   text-decoration: none;
@@ -294,7 +361,7 @@ body img {
 }
 body img[icon] {
   width: 200px;
-  height: 300px;
+  height: 200px;
 }
 body span.material-symbols-outlined {
   width: 18px;

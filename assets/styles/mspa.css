@@ -5,6 +5,7 @@ body pesterlog {
   background-color: white;
   color: black;
   width: 100%;
+  max-width: 800px;
   box-sizing: border-box;
   font-family: 'Courier New', Courier, monospace;
   font-size: 14px;
