@@ -101,7 +101,7 @@ body textarea[bg] {
 body input[type=number],
 body select[type=number],
 body textarea[type=number] {
-  width: calc(2ch + 8px);
+  width: calc(4ch + 8px);
   -moz-appearance: textfield;
 }
 body input[type=number]::-webkit-inner-spin-button,

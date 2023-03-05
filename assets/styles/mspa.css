@@ -11,6 +11,13 @@ body pesterlog {
   font-size: 14px;
   text-align: left;
 }
+body pesterlog a,
+body pesterlog a:visited {
+  color: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
 body pesterlog coloredtext {
   display: inline-block;
   line-height: 18px;
