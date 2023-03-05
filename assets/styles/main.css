@@ -222,6 +222,10 @@ body box[justify-around] {
   justify-content: space-around;
   text-align: center;
 }
+body box[justify-between] {
+  justify-content: space-between;
+  text-align: center;
+}
 body box[nowrap] {
   flex-wrap: nowrap;
 }
