@@ -22,9 +22,37 @@
   <body>
     <box frame horizontal justify-between noimportant code align-center>
   <a href="/">&lt;== Back</a>
-  <a href="https://trollcall.xyz/char/joltif" onclick="event.preventDefault();navigator.clipboard.writeText(event.target.getAttribute('href'));"><text big class="FORCEUNDERLINE">Joltif Zoxxit</text></a>
+  <a href="https://trollcall.xyz/char/joltif" onclick="linkClick(event)"><text big class="FORCEUNDERLINE">Joltif Zoxxit</text></a>
   <text>Character</text>
 </box>
+<box frame id="ClipPrompt"></box>
+<style>
+  #ClipPrompt {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 72px;  
+    left: 50%; 
+    transform: translateX(-50%);
+    transition: opacity 2s;
+  }
+  .ClipVisible {
+    opacity: 1 !important;
+    transition: opacity 0.25s !important;
+  }
+</style>
+<script>
+  function linkClick(e) {
+    console.log(e.target.parentElement);
+    e.preventDefault();
+    navigator.clipboard.writeText(e.target.parentElement.getAttribute('href'));
+    document.getElementById("ClipPrompt").innerHTML = `<text>Copied <i>${e.target.parentElement.getAttribute('href')}</i> to clipboard</text>`;
+    document.getElementById("ClipPrompt").classList.add("ClipVisible");
+    setTimeout(() => {
+      document.getElementById("ClipPrompt").classList.remove("ClipVisible");
+    }, 1500);
+  }
+</script>
     <box horizontal nopad align-start justify-start>
       <box nopad strictparent>
         <box outline parent>
@@ -59,7 +87,7 @@
           <text big>Owner</text>
           <box frame align-left important>
             
-              <a href="https://meowcatheorange.github.io/" code>MeowcaTheoRange</a>
+              <box nopad span horizontal vcontent align-center nogap><a href="https://meowcatheorange.github.io/" code>MeowcaTheoRange</a>&nbsp;<text frame normal style="--this-color0: rgb(0, 0, 0);--this-color10: rgb(51, 26, 0);--this-color20: rgb(102, 51, 0);--this-color30: rgb(153, 77, 0);--this-color40: rgb(204, 102, 0);--this-color50: rgb(255, 128, 0);--this-color60: rgb(255, 153, 51);--this-color70: rgb(255, 179, 102);--this-color80: rgb(255, 204, 153);--this-color90: rgb(255, 230, 204);--this-color100: rgb(255, 255, 255);">OWNER</text></box>
             
           </box>
         </box>
@@ -181,13 +209,13 @@
           <text big>Chat Program</text>
           <pesterlog>
             <dialogue><span style="color: rgb(161,161,0)">technologicalConnectivity [TC]</span> is trolling you.</dialogue>
-            <dialogue style="color: rgb(161,161,0)">TC: (!) the quick brown fox jumped over the lazy dog&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dialogue>
+            <dialogue style="color: rgb(161,161,0)">TC: (!) the quick brown fox jumped over the lazy dog&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dialogue>
             <dialogue style="color: rgb(161,161,0)">TC: (!) my girl wove six dozen plaid jackets before she quit?</dialogue>
-            <dialogue style="color: rgb(161,161,0)">TC: (!) sphinx of black quartz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; judge my vow!</dialogue>
-            <dialogue style="color: rgb(161,161,0)">TC: (.) wait&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shh...........</dialogue>
-            <dialogue style="color: rgb(161,161,0)">TC: (.) the quick brown fox jumped over the lazy dog&nbsp;</dialogue>
+            <dialogue style="color: rgb(161,161,0)">TC: (!) sphinx of black quartz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; judge my vow!</dialogue>
+            <dialogue style="color: rgb(161,161,0)">TC: (.) wait&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shh...</dialogue>
+            <dialogue style="color: rgb(161,161,0)">TC: (.) the quick brown fox jumped over the lazy dog&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dialogue>
             <dialogue style="color: rgb(161,161,0)">TC: (.) my girl wove six dozen plaid jackets before she quit?</dialogue>
-            <dialogue style="color: rgb(161,161,0)">TC: (.) sphinx of black quartz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;judge my vow!</dialogue>
+            <dialogue style="color: rgb(161,161,0)">TC: (.) sphinx of black quartz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;judge my vow!</dialogue>
           </pesterlog>
           <details>
             <summary>Show source text</summary>

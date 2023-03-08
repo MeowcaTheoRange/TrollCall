@@ -232,6 +232,9 @@ body box[nowrap] {
 body box[nopad] {
   padding: 0;
 }
+body box[nogap] {
+  gap: 0;
+}
 body box[noimportant] {
   flex: 0;
 }
@@ -254,7 +257,7 @@ body box[vcontent] {
   overflow: visible;
 }
 body box[content] {
-  width: max-content;
+  min-width: min-content;
   overflow: visible;
 }
 body box[debug] {
@@ -283,6 +286,11 @@ body text[big],
 body a[big] {
   font-size: 18px;
 }
+body text[normal],
+body a[normal] {
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+}
 body text[pad],
 body a[pad] {
   padding: 8px;
@@ -298,6 +306,11 @@ body a[align-left] {
 body text[align-right],
 body a[align-right] {
   text-align: right;
+}
+body text[content],
+body a[content] {
+  width: max-content;
+  overflow: visible;
 }
 body text[nobreak],
 body a[nobreak] {
