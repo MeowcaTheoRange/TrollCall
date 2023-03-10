@@ -21,18 +21,24 @@
     <box span align-center nopad justify-start>
       <box nopad span noimportant></box>
       <box align-stretch nopad>
-        <box frame horizontal justify-between noimportant code align-center>
+        <box class="clipparent" frame horizontal justify-between noimportant code align-center>
   <a href="/">&lt;== Back</a>
+   
   <a href="https://trollcall.xyz/pester/test" onclick="linkClick(event)"><text big class="FORCEUNDERLINE">Test</text></a>
+  
   <text>Pesterlog</text>
+  <box frame id="ClipPrompt"></box>
 </box>
-<box frame id="ClipPrompt"></box>
 <style>
+  .clipparent {
+    position: relative;
+    overflow: visible;
+  }
   #ClipPrompt {
     opacity: 0;
     pointer-events: none;
     position: absolute;
-    top: 72px;  
+    top: calc(100% + 4px);
     left: 50%; 
     transform: translateX(-50%);
     transition: opacity 2s;
@@ -47,7 +53,7 @@
     console.log(e.target.parentElement);
     e.preventDefault();
     navigator.clipboard.writeText(e.target.parentElement.getAttribute('href'));
-    document.getElementById("ClipPrompt").innerHTML = `<text>Copied <i>${e.target.parentElement.getAttribute('href')}</i> to clipboard</text>`;
+    document.getElementById("ClipPrompt").innerHTML = `<text normal>Copied <i>${e.target.parentElement.getAttribute('href')}</i> to clipboard</text>`;
     document.getElementById("ClipPrompt").classList.add("ClipVisible");
     setTimeout(() => {
       document.getElementById("ClipPrompt").classList.remove("ClipVisible");
@@ -59,21 +65,21 @@
           <!-- <text></text> -->
           <pesterlog>
             <dialogue>
-              <span style="color: rgb(7,132,70)">obfuscatedProcesses [OP]</span> 
+              <a href="/char/keelez"><span style="color: rgb(7,132,70)">obfuscatedProcesses [OP]</span></a> 
               began trolling 
-              <span style="color: rgb(161,0,0)">untidyArtistry [UA]</span>.
+              <a href="/char/thaobi"><span style="color: rgb(161,0,0)">untidyArtistry [UA]</span></a>.
             </dialogue>
             
             
-            <dialogue style="color: rgb(7,132,70)">OP: <i>What a wonderful day.</i></dialogue>
+              <dialogue style="color: rgb(7,132,70)">OP: <i>What a wonderful day.</i></dialogue>
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ The Fitnessgram Pacer Test Is A Multistage Aerobic Capacity Test That Progressively Gets More Difficult As It Continues... 🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ The Fitnessgram Pacer Test Is A Multistage Aerobic Capacity Test That Progressively Gets More Difficult As It Continues... 🖌️</dialogue>
             
-            <dialogue style="color: rgb(7,132,70)">OP: <i>what?</i></dialogue>
+              <dialogue style="color: rgb(7,132,70)">OP: <i>what?</i></dialogue>
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Hehehehehehehehehehe 🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Hehehehehehehehehehe 🖌️</dialogue>
             
-            <dialogue style="color: rgb(7,132,70)">OP: <i>I will NEVER understand you, Thaobi.</i></dialogue>
+              <dialogue style="color: rgb(7,132,70)">OP: <i>I will NEVER understand you, Thaobi.</i></dialogue>
             
 
             <dialogue>
@@ -111,14 +117,8 @@
             </pesterlog>
           </details>
         </box>
-        <box outline parent align-start span noimportant>
-          <text big>Links</text>
-          <box frame align-left important>
-            <a href="https://trollcall.xyz/pester/test" onclick="event.preventDefault();navigator.clipboard.writeText(event.target.getAttribute('href'));" code>https://trollcall.xyz/pester/test</a>
-          </box>
-        </box>
         <box frame span align-stretch noimportant>
-  <text span>TrollCall.xyz (rev. 2 upd. MARCH-4)</text>
+  <text span>TrollCall.xyz (rev. 2 upd. MARCH-5)</text>
   <text span>© 2023 MeowcaTheoRange. Some characters may not be owned by me.</text>
   <spacer noshow></spacer>
   <text span>This website uses character species and designs from the property Homestuck.</text>
@@ -132,7 +132,7 @@
     <script type="module">
       import * as color from "/assets/scripts/color.js";
       color.themeColor("#ffffff", "pri");
-      color.themeColor("#404040", "sec");
+      color.themeColor("#000080", "sec");
     </script>
   </body>
 </html>
