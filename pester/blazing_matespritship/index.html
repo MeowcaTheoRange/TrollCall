@@ -21,18 +21,24 @@
     <box span align-center nopad justify-start>
       <box nopad span noimportant></box>
       <box align-stretch nopad>
-        <box frame horizontal justify-between noimportant code align-center>
+        <box class="clipparent" frame horizontal justify-between noimportant code align-center>
   <a href="/">&lt;== Back</a>
+   
   <a href="https://trollcall.xyz/pester/blazing_matespritship" onclick="linkClick(event)"><text big class="FORCEUNDERLINE">Blazing Matespritship</text></a>
+  
   <text>Pesterlog</text>
+  <box frame id="ClipPrompt"></box>
 </box>
-<box frame id="ClipPrompt"></box>
 <style>
+  .clipparent {
+    position: relative;
+    overflow: visible;
+  }
   #ClipPrompt {
     opacity: 0;
     pointer-events: none;
     position: absolute;
-    top: 72px;  
+    top: calc(100% + 4px);
     left: 50%; 
     transform: translateX(-50%);
     transition: opacity 2s;
@@ -47,7 +53,7 @@
     console.log(e.target.parentElement);
     e.preventDefault();
     navigator.clipboard.writeText(e.target.parentElement.getAttribute('href'));
-    document.getElementById("ClipPrompt").innerHTML = `<text>Copied <i>${e.target.parentElement.getAttribute('href')}</i> to clipboard</text>`;
+    document.getElementById("ClipPrompt").innerHTML = `<text normal>Copied <i>${e.target.parentElement.getAttribute('href')}</i> to clipboard</text>`;
     document.getElementById("ClipPrompt").classList.add("ClipVisible");
     setTimeout(() => {
       document.getElementById("ClipPrompt").classList.remove("ClipVisible");
@@ -59,73 +65,73 @@
           <!-- <text></text> -->
           <pesterlog>
             <dialogue>
-              <span style="color: rgb(162,82,3)">groovingAeons [GA]</span> 
+              <a href="/char/temano"><span style="color: rgb(162,82,3)">groovingAeons [GA]</span></a> 
               began trolling 
-              <span style="color: rgb(161,161,0)">technologicalConnectivity [TC]</span>.
+              <a href="/char/joltif"><span style="color: rgb(161,161,0)">technologicalConnectivity [TC]</span></a>.
             </dialogue>
             
             
-            <dialogue style="color: rgb(162,82,3)">GA: =|=| Hi love <3!! =|=||</dialogue>
+              <dialogue style="color: rgb(162,82,3)">GA: |∞| Hi love <3!! |∞|</dialogue>
             
-            <dialogue style="color: rgb(161,161,0)">TC: (!) aww&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; how sweet</dialogue>
+              <dialogue style="color: rgb(161,161,0)">TC: (!) aww&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; how sweet</dialogue>
             
-            <dialogue style="color: rgb(161,161,0)">TC: (!) lol hey whats up te&nbsp;&nbsp;&nbsp;</dialogue>
+              <dialogue style="color: rgb(161,161,0)">TC: (!) lol hey whats up te&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dialogue>
             
-            <dialogue style="color: rgb(162,82,3)">GA: =|=| Not much!! =|=||</dialogue>
+              <dialogue style="color: rgb(162,82,3)">GA: |∞| Not much!! |∞|</dialogue>
             
-            <dialogue style="color: rgb(162,82,3)">GA: =|=| I'm just waiting for my custodian to get off of me!! =|=||</dialogue>
+              <dialogue style="color: rgb(162,82,3)">GA: |∞| I'm just waiting for my custodian to get off of me!! |∞|</dialogue>
             
-            <dialogue style="color: rgb(162,82,3)">GA: =|=| So I'm texting you!! =|=||</dialogue>
+              <dialogue style="color: rgb(162,82,3)">GA: |∞| So I'm texting you!! |∞|</dialogue>
             
-            <dialogue style="color: rgb(161,161,0)">TC: (!) oh</dialogue>
+              <dialogue style="color: rgb(161,161,0)">TC: (!) oh</dialogue>
             
-            <dialogue style="color: rgb(161,161,0)">TC: (!) xd</dialogue>
+              <dialogue style="color: rgb(161,161,0)">TC: (!) xd</dialogue>
             
-            <dialogue style="color: rgb(161,161,0)">TC: (!) fun</dialogue>
+              <dialogue style="color: rgb(161,161,0)">TC: (!) fun</dialogue>
             
-            <dialogue style="color: rgb(162,82,3)">GA: =|=| My bones feel horrible!! =|=||</dialogue>
+              <dialogue style="color: rgb(162,82,3)">GA: |∞| My bones feel horrible!! |∞|</dialogue>
             
-            <dialogue style="color: rgb(162,82,3)">GA: =|=| And I think I'm going to puke!! =|=||</dialogue>
+              <dialogue style="color: rgb(162,82,3)">GA: |∞| And I think I'm going to puke!! |∞|</dialogue>
             
-            <dialogue style="color: rgb(161,161,0)">TC: (!) uhh............ well</dialogue>
+              <dialogue style="color: rgb(161,161,0)">TC: (!) uhh....... well</dialogue>
             
-            <dialogue style="color: rgb(161,161,0)">TC: (!) have you tried kicking him?</dialogue>
+              <dialogue style="color: rgb(161,161,0)">TC: (!) have you tried kicking him?</dialogue>
             
-            <dialogue style="color: rgb(162,82,3)">GA: =|=| I would reverse out of this but my bones hurt so much I can't focus!! =|=||</dialogue>
+              <dialogue style="color: rgb(162,82,3)">GA: |∞| I would reverse out of this but my bones hurt so much I can't focus!! |∞|</dialogue>
             
-            <dialogue style="color: rgb(162,82,3)">GA: =|=| And also I'm using Trollian so I can't do that right now otherwize it'll freak out!! =|=||</dialogue>
+              <dialogue style="color: rgb(162,82,3)">GA: |∞| And also I'm using Trollian so I can't do that right now otherwize it'll freak out!! |∞|</dialogue>
             
-            <dialogue style="color: rgb(161,161,0)">TC: (!) oh my gog</dialogue>
+              <dialogue style="color: rgb(161,161,0)">TC: (!) oh my gog</dialogue>
             
-            <dialogue style="color: rgb(161,161,0)">TC: (!) why are you still using trollian</dialogue>
+              <dialogue style="color: rgb(161,161,0)">TC: (!) why are you still using trollian</dialogue>
             
-            <dialogue style="color: rgb(161,161,0)">TC: (!) of all clients        ???</dialogue>
+              <dialogue style="color: rgb(161,161,0)">TC: (!) of all clients        ???</dialogue>
             
-            <dialogue style="color: rgb(162,82,3)">GA: =|=| Sorry I spent all of my ('-) doing other stuff and I didn't have the energy to do any more rewinding because it was late!! =|=||</dialogue>
+              <dialogue style="color: rgb(162,82,3)">GA: |∞| Sorry I spent all of my ('-) doing other stuff and I didn't have the energy to do any more rewinding because it was late!! |∞|</dialogue>
             
-            <dialogue style="color: rgb(162,82,3)">GA: =|=| So I couldn't l∞k at the options sorry man :[!! =|=||</dialogue>
+              <dialogue style="color: rgb(162,82,3)">GA: |∞| So I couldn't l∞k at the options sorry man :[!! |∞|</dialogue>
             
-            <dialogue style="color: rgb(161,161,0)">TC: (!) ...................sigh</dialogue>
+              <dialogue style="color: rgb(161,161,0)">TC: (!) .................sigh</dialogue>
             
-            <dialogue style="color: rgb(161,161,0)">TC: (!) its fine&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; im just a bit mad</dialogue>
+              <dialogue style="color: rgb(161,161,0)">TC: (!) its fine&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; im just a bit mad</dialogue>
             
-            <dialogue style="color: rgb(161,161,0)">TC: (!) but thats understandable</dialogue>
+              <dialogue style="color: rgb(161,161,0)">TC: (!) but thats understandable</dialogue>
             
-            <dialogue style="color: rgb(162,82,3)">GA: =|=| I wish I could help. Really!! =|=||</dialogue>
+              <dialogue style="color: rgb(162,82,3)">GA: |∞| I wish I could help. Really!! |∞|</dialogue>
             
-            <dialogue style="color: rgb(161,161,0)">TC: (!) no its not your fault</dialogue>
+              <dialogue style="color: rgb(161,161,0)">TC: (!) no its not your fault</dialogue>
             
-            <dialogue style="color: rgb(161,161,0)">TC: (!) its just a nerd thing you know</dialogue>
+              <dialogue style="color: rgb(161,161,0)">TC: (!) its just a nerd thing you know</dialogue>
             
-            <dialogue style="color: rgb(162,82,3)">GA: =|=| Oh true!! =|=||</dialogue>
+              <dialogue style="color: rgb(162,82,3)">GA: |∞| Oh true!! |∞|</dialogue>
             
-            <dialogue style="color: rgb(162,82,3)">GA: =|=| Ok I have to go. I'm gonna see what I can do to get my custodian off of me!! =|=||</dialogue>
+              <dialogue style="color: rgb(162,82,3)">GA: |∞| Ok I have to go. I'm gonna see what I can do to get my custodian off of me!! |∞|</dialogue>
             
-            <dialogue style="color: rgb(161,161,0)">TC: (!) if time breaks down&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i'm gonna assume you're dead&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ok?</dialogue>
+              <dialogue style="color: rgb(161,161,0)">TC: (!) if time breaks down&nbsp;&nbsp;&nbsp;&nbsp; i'm gonna assume you're dead&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ok?</dialogue>
             
-            <dialogue style="color: rgb(162,82,3)">GA: =|=| G∞d precaution!! =|=||</dialogue>
+              <dialogue style="color: rgb(162,82,3)">GA: |∞| G∞d precaution!! |∞|</dialogue>
             
-            <dialogue style="color: rgb(162,82,3)">GA: =|=| OK bye!! =|=||</dialogue>
+              <dialogue style="color: rgb(162,82,3)">GA: |∞| OK bye!! |∞|</dialogue>
             
 
             <dialogue>
@@ -230,7 +236,7 @@
     <script type="module">
       import * as color from "/assets/scripts/color.js";
       color.themeColor("#ffffff", "pri");
-      color.themeColor("#404040", "sec");
+      color.themeColor("#000080", "sec");
     </script>
   </body>
 </html>

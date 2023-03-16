@@ -21,18 +21,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20,700,1" rel="stylesheet" />
   </head>
   <body>
-    <box frame horizontal justify-between noimportant code align-center>
+    <box class="clipparent" frame horizontal justify-between noimportant code align-center>
   <a href="/">&lt;== Back</a>
+   
   <a href="https://trollcall.xyz/char/syreta" onclick="linkClick(event)"><text big class="FORCEUNDERLINE">Syreta Roseus</text></a>
+  
   <text>Character</text>
+  <box frame id="ClipPrompt"></box>
 </box>
-<box frame id="ClipPrompt"></box>
 <style>
+  .clipparent {
+    position: relative;
+    overflow: visible;
+  }
   #ClipPrompt {
     opacity: 0;
     pointer-events: none;
     position: absolute;
-    top: 72px;  
+    top: calc(100% + 4px);
     left: 50%; 
     transform: translateX(-50%);
     transition: opacity 2s;
@@ -47,7 +53,7 @@
     console.log(e.target.parentElement);
     e.preventDefault();
     navigator.clipboard.writeText(e.target.parentElement.getAttribute('href'));
-    document.getElementById("ClipPrompt").innerHTML = `<text>Copied <i>${e.target.parentElement.getAttribute('href')}</i> to clipboard</text>`;
+    document.getElementById("ClipPrompt").innerHTML = `<text normal>Copied <i>${e.target.parentElement.getAttribute('href')}</i> to clipboard</text>`;
     document.getElementById("ClipPrompt").classList.add("ClipVisible");
     setTimeout(() => {
       document.getElementById("ClipPrompt").classList.remove("ClipVisible");
@@ -80,7 +86,7 @@
           <text big>Owner</text>
           <box frame align-left important>
             
-              <box nopad span horizontal vcontent align-center nogap><a href="https://twitter.com/pinko_art" code>pink</a></box>
+              <box class="nameFlairHolder" nopad span horizontal align-center nogap><a href="https://twitter.com/pinko_art" code>pink</a></box>
             
           </box>
         </box>
@@ -190,8 +196,8 @@
           <text big>Chat Program</text>
           <pesterlog>
             <dialogue><span style="color: rgb(162,82,3)">artsyRemedy [AR]</span> is trolling you.</dialogue>
-            <dialogue style="color: rgb(162,82,3)">AR: the quick brown fox jumped over the lazy dog :)</dialogue>
-            <dialogue style="color: rgb(162,82,3)">AR: my girl wove six dozen plaid jackets before she quit :)</dialogue>
+            <dialogue style="color: rgb(162,82,3)">AR: the quick brown fox jumped over the lazy dog</dialogue>
+            <dialogue style="color: rgb(162,82,3)">AR: my girl wove six dozen plaid jackets before she quit</dialogue>
             <dialogue style="color: rgb(162,82,3)">AR: sphinx of black quartz judge my vow</dialogue>
             <dialogue style="color: rgb(162,82,3)">AR: (wait. shh...)</dialogue>
             <dialogue style="color: rgb(162,82,3)">AR: (the quick brown fox jumped over the lazy dog.)</dialogue>

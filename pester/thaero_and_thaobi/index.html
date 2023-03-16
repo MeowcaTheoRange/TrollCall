@@ -21,18 +21,24 @@
     <box span align-center nopad justify-start>
       <box nopad span noimportant></box>
       <box align-stretch nopad>
-        <box frame horizontal justify-between noimportant code align-center>
+        <box class="clipparent" frame horizontal justify-between noimportant code align-center>
   <a href="/">&lt;== Back</a>
+   
   <a href="https://trollcall.xyz/pester/thaero_and_thaobi" onclick="linkClick(event)"><text big class="FORCEUNDERLINE">Thaero And Thaobi</text></a>
+  
   <text>Pesterlog</text>
+  <box frame id="ClipPrompt"></box>
 </box>
-<box frame id="ClipPrompt"></box>
 <style>
+  .clipparent {
+    position: relative;
+    overflow: visible;
+  }
   #ClipPrompt {
     opacity: 0;
     pointer-events: none;
     position: absolute;
-    top: 72px;  
+    top: calc(100% + 4px);
     left: 50%; 
     transform: translateX(-50%);
     transition: opacity 2s;
@@ -47,7 +53,7 @@
     console.log(e.target.parentElement);
     e.preventDefault();
     navigator.clipboard.writeText(e.target.parentElement.getAttribute('href'));
-    document.getElementById("ClipPrompt").innerHTML = `<text>Copied <i>${e.target.parentElement.getAttribute('href')}</i> to clipboard</text>`;
+    document.getElementById("ClipPrompt").innerHTML = `<text normal>Copied <i>${e.target.parentElement.getAttribute('href')}</i> to clipboard</text>`;
     document.getElementById("ClipPrompt").classList.add("ClipVisible");
     setTimeout(() => {
       document.getElementById("ClipPrompt").classList.remove("ClipVisible");
@@ -59,73 +65,73 @@
           <!-- <text></text> -->
           <pesterlog>
             <dialogue>
-              <span style="color: rgb(161,0,0)">untidyArtistry [UA]</span> 
+              <a href="/char/thaobi"><span style="color: rgb(161,0,0)">untidyArtistry [UA]</span></a> 
               began trolling 
-              <span style="color: rgb(51,102,1)">untidyFunctions [UF]</span>.
+              <a href="/char/thaero"><span style="color: rgb(51,102,1)">untidyFunctions [UF]</span></a>.
             </dialogue>
             
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ ...  🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ ...  🖌️</dialogue>
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Oops Sorry 🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Oops Sorry 🖌️</dialogue>
             
-            <dialogue style="color: rgb(51,102,1)">UF: Excuse me</dialogue>
+              <dialogue style="color: rgb(51,102,1)">UF: Excuse me</dialogue>
             
-            <dialogue style="color: rgb(51,102,1)">UF: Who is this(? :);</dialogue>
+              <dialogue style="color: rgb(51,102,1)">UF: Who is this(? :);</dialogue>
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ A Ghost 🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ A Ghost 🖌️</dialogue>
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Oooo 🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Oooo 🖌️</dialogue>
             
-            <dialogue style="color: rgb(51,102,1)">UF: FUCK thats scary</dialogue>
+              <dialogue style="color: rgb(51,102,1)">UF: FUCK thats scary</dialogue>
             
-            <dialogue style="color: rgb(51,102,1)">UF: WARN ME NEXT TIME WILL YOU(...);</dialogue>
+              <dialogue style="color: rgb(51,102,1)">UF: WARN ME NEXT TIME WILL YOU(...);</dialogue>
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Lol 🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Lol 🖌️</dialogue>
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Scaredycat 🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Scaredycat 🖌️</dialogue>
             
-            <dialogue style="color: rgb(51,102,1)">UF: NOO I DONT WANNA GET CULLED(...); have mercy</dialogue>
+              <dialogue style="color: rgb(51,102,1)">UF: NOO I DONT WANNA GET CULLED(...); have mercy</dialogue>
             
-            <dialogue style="color: rgb(51,102,1)">UF: Haha</dialogue>
+              <dialogue style="color: rgb(51,102,1)">UF: Haha</dialogue>
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Uh 🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Uh 🖌️</dialogue>
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ What 🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ What 🖌️</dialogue>
             
-            <dialogue style="color: rgb(51,102,1)">UF: Youre not gonna kill me(? :);</dialogue>
+              <dialogue style="color: rgb(51,102,1)">UF: Youre not gonna kill me(? :);</dialogue>
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Is That What Ghosts Do?! 🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Is That What Ghosts Do?! 🖌️</dialogue>
             
-            <dialogue style="color: rgb(51,102,1)">UF: Wow(); OK(); no need to be mean(...);</dialogue>
+              <dialogue style="color: rgb(51,102,1)">UF: Wow(); OK(); no need to be mean(...);</dialogue>
             
-            <dialogue style="color: rgb(51,102,1)">UF: I didnt know man(); Sorry</dialogue>
+              <dialogue style="color: rgb(51,102,1)">UF: I didnt know man(); Sorry</dialogue>
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ No Wait Thats A Question... Its Just My Quirk Lol 🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ No Wait Thats A Question... Its Just My Quirk Lol 🖌️</dialogue>
             
-            <dialogue style="color: rgb(51,102,1)">UF: Oh ok();</dialogue>
+              <dialogue style="color: rgb(51,102,1)">UF: Oh ok();</dialogue>
             
-            <dialogue style="color: rgb(51,102,1)">UF: Yeah(); I think();</dialogue>
+              <dialogue style="color: rgb(51,102,1)">UF: Yeah(); I think();</dialogue>
             
-            <dialogue style="color: rgb(51,102,1)">UF: Also(); wait(); Who are you(? :); Like actually(? :);</dialogue>
+              <dialogue style="color: rgb(51,102,1)">UF: Also(); wait(); Who are you(? :); Like actually(? :);</dialogue>
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Um 🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Um 🖌️</dialogue>
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Shit... 🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Shit... 🖌️</dialogue>
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Shit......... 🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Shit......... 🖌️</dialogue>
             
-            <dialogue style="color: rgb(51,102,1)">UF: (? :);</dialogue>
+              <dialogue style="color: rgb(51,102,1)">UF: (? :);</dialogue>
             
-            <dialogue style="color: rgb(51,102,1)">UF:  [...Are] you OK(??);</dialogue>
+              <dialogue style="color: rgb(51,102,1)">UF:  [...Are] you OK(??);</dialogue>
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Im Sorry Im Not Supposed To Contact Anyone Directly 🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ Im Sorry Im Not Supposed To Contact Anyone Directly 🖌️</dialogue>
             
-            <dialogue style="color: rgb(161,0,0)">UA: 🖌️ I Have To Go 🖌️</dialogue>
+              <dialogue style="color: rgb(161,0,0)">UA: 🖌️ I Have To Go 🖌️</dialogue>
             
-            <dialogue style="color: rgb(51,102,1)">UF: What(? :);</dialogue>
+              <dialogue style="color: rgb(51,102,1)">UF: What(? :);</dialogue>
             
-            <dialogue style="color: rgb(51,102,1)">UF: (??)(? :);</dialogue>
+              <dialogue style="color: rgb(51,102,1)">UF: (??)(? :);</dialogue>
             
 
             <dialogue>
@@ -230,7 +236,7 @@
     <script type="module">
       import * as color from "/assets/scripts/color.js";
       color.themeColor("#ffffff", "pri");
-      color.themeColor("#404040", "sec");
+      color.themeColor("#000080", "sec");
     </script>
   </body>
 </html>

@@ -21,18 +21,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20,700,1" rel="stylesheet" />
   </head>
   <body>
-    <box frame horizontal justify-between noimportant code align-center>
+    <box class="clipparent" frame horizontal justify-between noimportant code align-center>
   <a href="/">&lt;== Back</a>
+   
   <a href="https://trollcall.xyz/char/lotine" onclick="linkClick(event)"><text big class="FORCEUNDERLINE">Lotine Restej</text></a>
+  
   <text>Character</text>
+  <box frame id="ClipPrompt"></box>
 </box>
-<box frame id="ClipPrompt"></box>
 <style>
+  .clipparent {
+    position: relative;
+    overflow: visible;
+  }
   #ClipPrompt {
     opacity: 0;
     pointer-events: none;
     position: absolute;
-    top: 72px;  
+    top: calc(100% + 4px);
     left: 50%; 
     transform: translateX(-50%);
     transition: opacity 2s;
@@ -47,7 +53,7 @@
     console.log(e.target.parentElement);
     e.preventDefault();
     navigator.clipboard.writeText(e.target.parentElement.getAttribute('href'));
-    document.getElementById("ClipPrompt").innerHTML = `<text>Copied <i>${e.target.parentElement.getAttribute('href')}</i> to clipboard</text>`;
+    document.getElementById("ClipPrompt").innerHTML = `<text normal>Copied <i>${e.target.parentElement.getAttribute('href')}</i> to clipboard</text>`;
     document.getElementById("ClipPrompt").classList.add("ClipVisible");
     setTimeout(() => {
       document.getElementById("ClipPrompt").classList.remove("ClipVisible");
@@ -78,7 +84,7 @@
           <text big>Owner</text>
           <box frame align-left important>
             
-              <box nopad span horizontal vcontent align-center nogap><a href="https://instagram.com/steamjunk23" code>Earl Grey</a></box>
+              <box class="nameFlairHolder" nopad span horizontal align-center nogap><a href="https://instagram.com/steamjunk23" code>Earl Grey</a></box>
             
           </box>
         </box>

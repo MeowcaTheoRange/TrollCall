@@ -120,8 +120,45 @@ body textarea[titleBox] {
   font-family: 'Krona One', sans-serif;
   text-transform: uppercase;
 }
+body input[span],
+body select[span],
+body textarea[span] {
+  width: 40ch;
+}
+body button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: var(--this-color20);
+  color: var(--this-color80);
+}
+body button[bg] {
+  --this-color0: var(--sec0);
+  --this-color10: var(--sec10);
+  --this-color20: var(--sec20);
+  --this-color30: var(--sec30);
+  --this-color40: var(--sec40);
+  --this-color50: var(--sec50);
+  --this-color60: var(--sec60);
+  --this-color70: var(--sec70);
+  --this-color80: var(--sec80);
+  --this-color90: var(--sec90);
+  --this-color100: var(--sec100);
+  font-family: 'Inconsolata', sans-serif;
+  padding: 4px;
+  border-radius: 8px;
+}
+body button:hover,
+body button:focus {
+  background-color: var(--this-color30);
+  color: var(--this-color70);
+}
+body button:active {
+  background-color: var(--this-color10);
+  color: var(--this-color90);
+}
 body textarea {
-  width: 80ch;
+  width: 40ch;
   height: 40ch;
   overflow: auto;
   resize: horizontal;
@@ -319,6 +356,10 @@ body a[nobreak] {
 body text[span],
 body a[span] {
   width: 100%;
+}
+body text[vspan],
+body a[vspan] {
+  height: 100%;
 }
 body text[frame],
 body a[frame] {
