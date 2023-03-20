@@ -26,6 +26,15 @@
             <text>Welcome to TrollCall, a website for indexing various fantrolls. Check them out!</text>
           </box>
         </box>
+        <noscript>
+  <box outline frame vcontent align-start span style="--this-color0: rgb(0, 0, 0);--this-color10: rgb(51, 0, 0);--this-color20: rgb(102, 0, 0);--this-color30: rgb(153, 0, 0);--this-color40: rgb(204, 0, 0);--this-color50: rgb(255, 0, 0);--this-color60: rgb(255, 51, 51);--this-color70: rgb(255, 102, 102);--this-color80: rgb(255, 153, 153);--this-color90: rgb(255, 204, 204);--this-color100: rgb(255, 255, 255);">
+    <text large>⚠ JavaScript is disabled ⚠</text>
+    <box>
+      <text>TrollCall <b>will still work</b>, but it might not look right.</text>
+      <text>Theme color won't be visible, and the copy link feature won't work.</text>
+    </box>
+  </box>
+</noscript>
         <box horizontal span nopad>
           <box outline span important strictparent content>
             <!-- <box align-start noimportant frame>
@@ -52,7 +61,7 @@
                 <text large id="chars">Characters</text>
                 <spacer></spacer>
                 <a href="/blood/">(Sort by caste)</a>
-                <box span>
+                <box span id="charactersHolder">
                 
                   <box horizontal nopad span vcontent align-center nogap id="MeowcaTheoRange"><text big>MeowcaTheoRange</text>&nbsp;<text frame normal style="--this-color0: rgb(0, 0, 0);--this-color10: rgb(102, 51, 0);--this-color20: rgb(204, 102, 0);--this-color30: rgb(255, 153, 0);--this-color40: rgb(255, 204, 0);--this-color50: rgb(255, 255, 0);--this-color60: rgb(255, 255, 51);--this-color70: rgb(255, 255, 102);--this-color80: rgb(255, 255, 153);--this-color90: rgb(255, 255, 204);--this-color100: rgb(255, 255, 255);">OWNER</text><text big>'s&nbsp;Characters</text></box>
                   <!-- <spacer></spacer> -->
@@ -342,6 +351,8 @@
   <spacer noshow></spacer>
   <text span>Name is from HIVESWAP's <a href="http://hs.trollcall.xyz/">TrollCall</a> page.</text>
   <text span>Homestuck and HIVESWAP © Homestuck Inc.</text>
+  <spacer noshow></spacer>
+  <text span>Tyzias Entykk sprites from Hiveswap Friendsim. <a href="https://mspaintadventures.fandom.com/wiki/File:TyziasSprites.gif">Source</a></text>
 </box>
       </box>
     </box>
@@ -349,6 +360,18 @@
       import * as color from "/assets/scripts/color.js";
       color.themeColor("#ffffff", "pri");
       color.themeColor("#000080", "sec");
+
+      var chholder = document.getElementById("charactersHolder");
+      if (Math.random() * 64 <= 1) chholder.innerHTML += `<box horizontal nopad span vcontent align-center nogap id="Hiveswap"><text big>Hiveswap Characters</text></box>
+      <box horizontal align-start span justify-center vcontent>
+        <a href="/404" boxish style="--this-color0: rgb(0, 0, 0);--this-color10: rgb(0, 51, 51);--this-color20: rgb(0, 102, 102);--this-color30: rgb(0, 153, 153);--this-color40: rgb(0, 204, 204);--this-color50: rgb(0, 255, 255);--this-color60: rgb(51, 255, 255);--this-color70: rgb(102, 255, 255);--this-color80: rgb(153, 255, 255);--this-color90: rgb(204, 255, 255);--this-color100: rgb(255, 255, 255);">
+          <box outline strictparent child pattern align-center>
+            <text large>Tyzias Entykk</text>
+            <text class="nameFlairHolder" span>Teal</text>
+            <img icon src="/404/imsurethisimagedoesNOTexist.png"/>
+          </box>
+        </a>
+      </box>`;
     </script>
   </body>
 </html>
