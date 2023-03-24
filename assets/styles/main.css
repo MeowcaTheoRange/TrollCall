@@ -117,7 +117,7 @@ body input[titleBox],
 body select[titleBox],
 body textarea[titleBox] {
   font-size: 24px;
-  font-family: 'Krona One', sans-serif;
+  font-family: 'TrollCall Display', sans-serif;
   text-transform: uppercase;
 }
 body input[span],
@@ -312,16 +312,20 @@ body text[large],
 body a[large],
 body text[big],
 body a[big] {
-  font-family: 'Krona One', sans-serif;
+  font-family: 'TrollCall Display', sans-serif;
   text-transform: uppercase;
 }
 body text[large],
 body a[large] {
-  font-size: 24px;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 400;
 }
 body text[big],
 body a[big] {
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 18px;
+  font-weight: 400;
 }
 body text[normal],
 body a[normal] {
