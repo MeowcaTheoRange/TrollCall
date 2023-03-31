@@ -41,6 +41,7 @@ body {
   box-sizing: border-box;
   padding: 32px;
   font-family: 'Nunito', sans-serif;
+  font-weight: bold;
   overflow-x: hidden;
   overflow-y: scroll;
   background-color: var(--this-color10);
@@ -317,14 +318,14 @@ body a[big] {
 }
 body text[large],
 body a[large] {
-  font-size: 28px;
+  font-size: 20px;
   line-height: 28px;
   font-weight: 400;
 }
 body text[big],
 body a[big] {
-  font-size: 20px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 400;
 }
 body text[normal],
