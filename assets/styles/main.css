@@ -317,13 +317,13 @@ body a[big] {
 }
 body text[large],
 body a[large] {
-  font-size: 28px;
+  font-size: 20px;
   line-height: 28px;
   font-weight: 400;
 }
 body text[big],
 body a[big] {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 18px;
   font-weight: 400;
 }
